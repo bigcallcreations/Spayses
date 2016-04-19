@@ -54,7 +54,7 @@ app.get('/SignUp', routes.SignUp);
 app.get('/ForgotPassword', routes.ForgotPassword);
 app.get('/ForgotPassword', routes.ForgotPassword);
 app.get('/Home', routes.home);
-
+ 
 //for chat
 var serve = http.createServer(app);
 var io = require('socket.io')(serve);

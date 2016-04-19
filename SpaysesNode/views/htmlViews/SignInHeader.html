@@ -1,0 +1,98 @@
+﻿<div id="login-top-header">
+
+    <div class="spaces-font login-spaces-font">
+        <a class="spaces-font" href="/Home">Spayses</a>
+    </div>
+
+    <div id="login-form">
+        <button class="si-btn">Sign In</button>
+        <button class="su-btn" style="">Sign Up</button>
+    </div>
+
+    <div id="mob-login-form">
+        <a href="/Login/SignIn" id="si">Sign In</a>
+        <a href="/Login/Register" class="su-mob">Sign Up</a>
+    </div>
+
+</div>
+
+<div class="login-body-text">
+    <div class="login-display login">
+        <div class="col-md-12">
+            <div id="login-msg" style="text-align:center;">
+                WELCOME TO SPAYSES
+            </div>
+
+            <div class="underline"></div>
+
+            <div class="quote" style="text-align:center;">Connect with people all over the globe.</div>
+
+            <div class="quote" style="text-align:center;">Join other people in spaces and chat about the things you're intersted in.</div>
+        </div>
+    </div>
+</div>
+
+<div class="register-section si-modal" style="display:none;">
+    <div id="login-title">Sign Up</div>
+    <a id="close">X</a>
+
+    <form action="/AddUser" method="post">
+        <input type="text" name="username" id="username" placeholder="Username" class="login-input" />
+        <input type="email" name="email" id="email" placeholder="Email" class="login-input" />
+        <input type="password" name="password" id="password" placeholder="Password" class="login-input" />
+        <input type="password" name="varifypassword" id="varify-password" placeholder="Confirm Password" class="login-input" />
+        <button id="registerbtn">Register</button>
+    </form>
+
+    <p id="aha">Already have an account? <a class="si-btn">Sign In</a></p>
+</div>
+
+<div class="login-section si-modal" style="display:none;">
+    <div id="login-title">Sign In</div>
+    <a id="close">X</a>
+
+    <form>
+        <input type="email" id="email" placeholder="Email" class="login-input" />
+        <input type="password" id="password" placeholder="Password" class="login-input" />
+        <button id="registerbtn">Sign In</button>
+
+        <p id="aha" style="margin-top:10px;">Don't have an account? <a class="su-btn">Sign Up</a></p>
+        <p id="aha"><a class="fp-btn">Forgot Password?</a></p>
+    </form>
+</div>
+
+<div class="forgotpw-section si-modal" style="display:none;">
+    <div id="login-title">Reset Your Password</div>
+    <a id="close">X</a>
+
+    <form>
+        <input type="email" id="email" placeholder="Email" class="login-input" />
+        <button id="registerbtn">Reset</button>
+    </form>
+</div>
+
+<div class="login-form-mobile" style="display:none;">
+    <div id="login-title">SIGN IN TO SPAYSES</div>
+
+    <form>
+        <div class="col-md-12">
+            <input id="email" class="login-input" placeholder="Email" type="email" />
+        </div>
+        <div class="col-md-12">
+            <input id="password" class="login-input" placeholder="Password" type="password" />
+        </div>
+
+        <button id="registerbtn">Sign In</button>
+    </form>
+
+    <p id="aha">Don't have an account? <a href="/SignUp">Sign Up</a></p>
+    <p id="aha" class="fp"><a href="/ForgotPassword">Forgot Password?</a></p>
+</div>
+
+<div style="position:absolute; width:100%;height:40px; background-color:black; top:calc(100% - 40px);">
+
+    <div id="bot-terms" style="float:right; color:#9d9d9d; margin-right:15px; height:40px; line-height:40px; width:auto; font-size:12px;">
+        2015 SPACES. ALL RIGHTS RESERVED &nbsp; PRIVACY POLICY &nbsp; / &nbsp; TERMS AND CONDITIONS
+    </div>
+
+</div>

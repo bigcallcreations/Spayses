@@ -1,0 +1,145 @@
+﻿
+<style>
+    .container {
+        padding: 0 !important;
+        margin: 0 !important;
+        background-color: #f0f1f3;
+        max-height: unset !important;
+        height: 100%;
+        width: 100%;
+        max-width: unset !important;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font: 13px Helvetica, Arial;
+    }
+
+    form {
+        background: #000;
+        padding: 3px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+        form input {
+            border: 0;
+            padding: 10px;
+            width: 90%;
+            margin-right: .5%;
+        }
+
+        form button {
+            width: 9%;
+            background: rgb(130, 224, 255);
+            border: none;
+            padding: 10px;
+        }
+
+    #messages {
+        list-style-type: none;
+        margin: 0;
+        padding: 0 50px;
+        position: relative;
+        width: 700px;
+        margin: 0 auto 50px;
+    }
+
+    .me {
+        clear: both;
+        float: left;
+        margin-bottom: 10px;
+    }
+
+    .you {
+        clear: both;
+        float: right;
+        margin-bottom: 10px;
+    }
+
+    .userAdded{
+        width:100%;
+        text-align:center;
+    }
+
+        .you .image, .me .image {
+            margin-bottom: 5px;
+        }
+
+    #messages .me p {
+        text-align: left;
+        float: left;
+        display: inline-block;
+        /*margin-left: 20px;*/
+        margin-bottom: 30px;
+        padding: 25px 34px;
+        min-width: 160px;
+        min-height: 10px;
+        max-width: 510px;
+        background-color: #FFF;
+        border-radius: 3px;
+        box-shadow: 0px 3px 3px #E3E4E6;
+        color: #637277;
+        line-height: 1.4;
+        word-wrap: break-word;
+    }
+
+    #messages .you p {
+        text-align: left;
+        float: left;
+        display: inline-block;
+        /*margin-right: 20px;*/
+        margin-bottom: 30px;
+        padding: 25px 34px;
+        min-width: 160px;
+        min-height: 10px;
+        max-width: 510px;
+        background-color: #FFF;
+        border-radius: 3px;
+        box-shadow: 0px 3px 3px #E3E4E6;
+        color: #637277;
+        line-height: 1.4;
+        word-wrap: break-word;
+    }
+</style>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/javascripts/jquery-1.10.2.js"></script>
+
+
+<script>
+    var socket = io();
+    $('form').submit(function () {
+        socket.emit('chat message', $('#m').val());
+        $('#m').val('');
+        return false;
+    });
+</script>
+
+<div class="nameWindow" style="height:100%; width:100%; ">
+
+    <div style="margin-top:25px; width:300px; margin-left:auto; margin-right:auto; position:relative;">
+        <p style="height:100px; width:100%; text-align:center">Enter Your Name</p>
+
+        <input id="name" autocomplete="off" style="width:100%;" />
+        <br />
+        <button id="start" style="margin-top:20px;margin-left:auto; margin-right:auto; position:relative;">Start Chatting</button>
+    </div>
+</div>
+
+<div class="chatWindow" style="height:100%; width:100%; display:none;">
+
+    <ul id="messages"></ul>
+
+    <form class="testchat" action="">
+        <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
+
+</div>

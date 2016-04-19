@@ -62,7 +62,7 @@ var io = require('socket.io')(serve);
 serve.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
 });
-
+ 
 io.on('connection', function (socket) {
     io.emit('userConnected', "A User Connected.");
     

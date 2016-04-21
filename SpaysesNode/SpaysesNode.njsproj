@@ -36,6 +36,9 @@
     <Content Include="public\images\Tower.png" />
     <Content Include="public\javascripts\chat.js" />
     <Content Include="public\javascripts\login.js" />
+    <Compile Include="public\javascripts\Home.js" />
+    <Compile Include="public\javascripts\jquery-2.2.3.min.js" />
+    <Compile Include="public\javascripts\Plugins\jquery.mCustomScrollbar.min.js" />
     <Compile Include="routes\index.js" />
   </ItemGroup>
   <ItemGroup>
@@ -46,6 +49,7 @@
     <Content Include="public\stylesheets\Login\Login.css" />
     <Content Include="public\stylesheets\Login\OriginalHoverEffects.zip" />
     <Content Include="public\stylesheets\Login\SignUp.css" />
+    <Content Include="public\stylesheets\Plugins\jquery.mCustomScrollbar.min.css" />
     <Content Include="public\stylesheets\style.css" />
     <None Include="spayses - Web Deploy.pubxml" />
     <Content Include="public\stylesheets\style_common.css" />
@@ -96,7 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
+    <Folder Include="public\javascripts\Plugins\" />
     <Folder Include="public\stylesheets\Login\" />
+    <Folder Include="public\stylesheets\Plugins\" />
     <Folder Include="views\htmlViews\" />
     <Folder Include="public\" />
     <Folder Include="public\fonts\" />

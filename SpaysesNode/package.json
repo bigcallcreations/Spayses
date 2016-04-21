@@ -14,6 +14,7 @@
     "express": "3.4.4",
     "flatten-packages": "^0.1.4",
     "jade": "*",
+    "jquery": "^2.2.3",
     "mongodb": "^2.1.14",
     "mysql": "^2.10.2",
     "razor": "^0.6.7",

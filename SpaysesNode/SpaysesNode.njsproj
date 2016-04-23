@@ -33,12 +33,20 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <None Include="Daniel.pubxml" />
+    <Content Include="public\images\5825408292_11759e3304_o.jpg" />
+    <Content Include="public\images\8274728646_555f9eab3a_k.jpg" />
+    <Content Include="public\images\9997944383_ea7eee16fa_k.jpg" />
+    <Content Include="public\images\cooltext178838751674676.png" />
+    <Content Include="public\images\MenuIcon.png" />
+    <Content Include="public\images\SpaysesIco.png" />
     <Content Include="public\images\Tower.png" />
     <Compile Include="public\javascripts\chat.js" />
     <Compile Include="public\javascripts\login.js" />
     <Compile Include="public\javascripts\Home.js" />
     <Compile Include="public\javascripts\jquery-2.2.3.min.js" />
     <Compile Include="public\javascripts\Plugins\jquery.mCustomScrollbar.min.js" />
+    <Compile Include="public\javascripts\Plugins\jQuery.scrollSpeed.js" />
+    <Compile Include="public\javascripts\Plugins\jquery.stickem.js" />
     <Compile Include="routes\index.js" />
   </ItemGroup>
   <ItemGroup>
@@ -50,9 +58,11 @@
     <Content Include="public\stylesheets\Login\OriginalHoverEffects.zip" />
     <Content Include="public\stylesheets\Login\SignUp.css" />
     <Content Include="public\stylesheets\Plugins\jquery.mCustomScrollbar.min.css" />
+    <Content Include="public\stylesheets\Plugins\screen.css" />
     <Content Include="public\stylesheets\style.css" />
     <None Include="spayses - Web Deploy.pubxml" />
     <Content Include="public\stylesheets\style_common.css" />
+    <Content Include="public\stylesheets\Tiles.css" />
     <Content Include="views\ForgotPassword.jade" />
     <Content Include="views\HomeLayout.jade" />
     <Content Include="views\htmlViews\Chat.html" />

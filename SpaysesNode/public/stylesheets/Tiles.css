@@ -1,0 +1,70 @@
+﻿.tile-container {
+    float: left;
+    height: 100%;
+    width: 100%;
+    /*background-color: #181818;*/
+    background-color:white;
+    margin-top: 10px;
+    padding: 20px 0;
+}
+
+    .tile-container .header {
+        float: left;
+        color: #47bab3;
+        height: 40px;
+        line-height: 40px;
+        width: 100%;
+        /*background-color: #181818;*/
+        /*background-color: #47bab3;*/
+        background-color:white;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom:20px;
+    }
+
+        .tile-container .header hr {
+            background-color: transparent;
+            height: 0;
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            border-top: 1px solid rgba(0,0,0,0.9);
+            margin: 0;
+            clear: both;
+        }
+
+    .tile-container .tile {
+        float: left;
+        background-color: white;
+        height: 200px;
+        border:1px solid #bebebe;
+    }
+
+        .tile-container .tile.single {
+            width: 25%;
+        }
+
+        .tile-container .tile.double {
+            width: 50%;
+        }
+
+        .tile-container .tile.full {
+            width: 100%;
+        }
+
+        .tile-container .tile.ad {
+            float: left;
+            /*width: 100%;*/
+            width: calc(100% - 25px);
+            margin-left:12.5px;
+            height: 100px;
+            margin-bottom: 12.5px;
+            margin-top: 12.5px;
+            background-color: #ffffff;
+            border:0 !important;
+        }
+
+        .stick-fixed{
+            position:fixed !important;
+            top:50px !important;
+            z-index:9990;
+        }

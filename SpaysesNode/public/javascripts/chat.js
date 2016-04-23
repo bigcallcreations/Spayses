@@ -7,6 +7,7 @@ $(function () {
         $('#m').val('');
         return false;
     });
+    
     socket.on('chat', function (data) {
         var who = "you";
         if (data.user == m_name)

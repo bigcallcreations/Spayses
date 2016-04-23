@@ -4,34 +4,30 @@
 }
 
 body {
-    float: left;
-    height: 100%;
-    width: 100%;
+    padding: 0px !important;
+    margin: 0px !important;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #181818;
-    /*background-color: #333333;*/
-    overflow: hidden;
-    /*background-image: url(../../../../images/6814029-tumblr-backgrounds.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;*/
+    background-color: white;
+    overflow-y: auto;
 }
 
 .container {
-    max-width: unset !important;
+    max-width: none !important;
     padding: 0 !important;
-    height: 100%;
 }
 
 #menu-top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 50px;
     background-color: black;
-    top: 0;
-    position: fixed;
-    z-index: 1000;
-    /*border-bottom: 1px solid #47bab3;
-    border-top: 1px solid #47bab3;*/
+    /*background-color: white;*/
+    z-index: 9000;
+
+    padding:0 20px;
+    border-bottom:1px solid #47bab3;
 }
 
     #menu-top-header .login-spaces-font a {
@@ -39,9 +35,11 @@ body {
         color: #efefef;
         margin-left: 25px;
         height: 100%;
-        line-height: 40px;
+        line-height: 50px;
         width: 200px;
         font-size: 40px !important;
+        text-decoration: none;
+        /*background-image: url('../../images/cooltext178838751674676.png');*/
     }
 
     #menu-top-header #login-form {
@@ -67,7 +65,7 @@ body {
         margin-top: 10px;
         margin-right: 20px;
         background-color: #eeecec;
-        border: 0 !important;
+        /*border: 0 !important;*/
         color: black;
         padding: 5px 10px;
         font-size: 12px;
@@ -88,13 +86,16 @@ body {
 
     #menu-top-header .search-header {
         margin: 0 !important;
-        height: 25px;
-        line-height: 25px;
+        height: 30px;
+        line-height: 30px;
         float: right !important;
-        margin-top: 12.5px !important;
+        margin-top: 10px !important;
         margin-right: 100px !important;
         width: auto;
         cursor: pointer;
+        /*border:1px solid lightgrey;
+        border-radius:0;*/
+
     }
 
         #menu-top-header .search-header div {
@@ -150,7 +151,59 @@ body {
         color: #1d1d1d;
     }
 
+
+/*MENU*/
+
+#side-menu {
+    position: fixed;
+    top: 50px;
+    width: 200px;
+    left: -200px;
+    height: 100%;
+    background-color: #282626;
+    z-index: 9999;
+    display: flex;
+    -webkit-align-content: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    /* -webkit-justify-content: center; */
+}
+
+    #side-menu ul {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+    }
+
+        #side-menu ul li {
+            margin: 40px auto 40px auto;
+            color: white;
+        }
+
+            #side-menu ul li a {
+                font-weight: 100;
+                letter-spacing: 2px;
+                font-size: 18px;
+                color: rgb(200, 200, 200);
+                text-decoration: none;
+                margin: 0 20px;
+                cursor: pointer;
+            }
+
+            #side-menu ul li hr {
+                width: 50%;
+                min-width: 100px;
+                border-color: #47bab3;
+            }
+
+
+
+
 /*BODY*/
+
+.view {
+    border: 0 !important;
+}
 
 #home-container {
     margin-top: 50px;
@@ -158,77 +211,33 @@ body {
     height: calc(100% - 50px);
     width: 100%;
     background-color: transparent;
+    /*overflow-y:auto;*/
 }
 
     #home-container .inner-container {
         position: relative;
         height: auto;
-        width: 1000px;
-        margin: 0 auto;
+        /*width: 1000px;*/
+        width: 100%;
+        /*margin: 0 auto;*/
         background-color: transparent;
     }
 
-        #home-container .inner-container .header {
-            float: left;
-            color: white;
-            height: 40px;
-            line-height: 40px;
-            width: 100%;
-            background-color: transparent;
-            font-size:20px;
-        }
+.stickem-container {
+    position: relative;
+}
 
-            #home-container .inner-container .header hr {
-                background-color: transparent;
-                height: 0;
-                border: none;
-                border-bottom: 1px solid rgba(255,255,255,0.08);
-                border-top: 1px solid rgba(0,0,0,0.9);
-                margin: 0;
-                clear: both;
-            }
+.stickit {
+    margin-left: 660px;
+    position: fixed;
+    top: 0;
+}
 
-    #home-container #panel {
-        float: left;
-        height: 100%;
-        width: 100%;
-        background-color: #181818;
-        margin-top: 20px;
-        padding: 20px 0;
-    }
-
-        #home-container #panel .cell {
-            float: left;
-            background-color: white;
-            margin-bottom: 12.5px;
-        }
-
-        #home-container #panel .cell1 {
-            width: 218.5px;
-            height: 200px;
-            margin-left: 25px;
-        }
-
-        #home-container #panel .cell2 {
-            width: 462.5px;
-            height: 200px;
-            margin-left: 25px;
-        }
-
-        #home-container #panel .full {
-            width: 950px;
-            height: 200px;
-            margin-left: 25px;
-        }
-
-        #home-container #panel .ad {
-            float: left;
-            width: 950px;
-            height: 100px;
-            margin-left: 25px;
-            margin-bottom: 12.5px;
-            background-color: #ffffff;
-        }
+.stickit-end {
+    bottom: 40px;
+    position: absolute;
+    right: 0;
+}
 
 
 @media only screen and (min-width: 1081px) {

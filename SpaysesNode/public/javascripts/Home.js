@@ -4,7 +4,7 @@ $(function () {
     //jQuery.scrollSpeed(100, 800);
     
     
-    InitStickyHeader();
+    //InitStickyHeader();
     
     InitSideMenu();
 });

@@ -1,14 +1,17 @@
-﻿.tile-container {
+﻿.tile-group {
     float: left;
     height: 100%;
     width: 100%;
     /*background-color: #181818;*/
-    background-color:white;
-    margin-top: 10px;
-    padding: 20px 0;
+    background-color: white;
+    /*margin-top: 10px;*/
+    padding: 20px 25px;
+
+    /*background-color:#282626;*/
+    background-color:transparent;
 }
 
-    .tile-container .header {
+    .tile-group .header {
         float: left;
         color: #47bab3;
         height: 40px;
@@ -16,55 +19,128 @@
         width: 100%;
         /*background-color: #181818;*/
         /*background-color: #47bab3;*/
-        background-color:white;
+        /*background-color: white;*/
+        background-color:transparent;
         font-size: 20px;
         text-align: center;
-        margin-bottom:20px;
+        margin-bottom: 45px;
     }
 
-        .tile-container .header hr {
+        .tile-group .header hr {
             background-color: transparent;
             height: 0;
             border: none;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            border-top: 1px solid rgba(0,0,0,0.9);
+            /*border-bottom: 1px solid rgba(255,255,255,0.08);
+            border-top: 1px solid rgba(0,0,0,0.9);*/
+            border-bottom: 1px solid #47bab3;
             margin: 0;
             clear: both;
+            padding-bottom:10px;
+            width:40%;
+            margin-left:30%;
         }
 
-    .tile-container .tile {
+    .tile-group .tile {
         float: left;
         background-color: white;
-        height: 200px;
-        border:1px solid #bebebe;
+        height: 250px;
+        /*border: 1px solid #bebebe;*/
+        padding: 20px;
     }
 
-        .tile-container .tile.single {
+        .tile-group .tile .tile-container {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+            .tile-group .tile .tile-container .title {
+                color: white;
+                margin-top: 0;
+                font-size: 20px;
+                line-height: 34px;
+                text-transform: uppercase;
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .tile-group .tile .tile-container .content {
+                color: #5c6873;
+                font-size: 17px;
+                text-align: center;
+            }
+
+            .tile-group .tile .tile-container .tile-btn {
+                position:relative;
+                margin: 10px auto;
+                color: #FFFFFF;
+                background: none;
+                border-color: #FFFFFF;
+                padding: 6px 18px 4px 18px;
+                font-size: 14px;
+                border-width: 1px;
+                text-transform: uppercase;
+                font-weight: bold;
+                border-radius:0;
+                width:80px;
+                left:50%;
+                margin-left:-40px;
+            }
+
+            .tile-group .tile.img {
+                background-size:cover;
+                background-repeat:no-repeat;
+            }
+
+        .tile-group .tile.single {
             width: 25%;
         }
 
-        .tile-container .tile.double {
+        .tile-group .tile.double {
             width: 50%;
         }
 
-        .tile-container .tile.full {
+        .tile-group .tile.full {
             width: 100%;
         }
 
-        .tile-container .tile.ad {
+        .tile-group .tile.ad {
             float: left;
             /*width: 100%;*/
             width: calc(100% - 25px);
-            margin-left:12.5px;
+            margin-left: 12.5px;
             height: 100px;
             margin-bottom: 12.5px;
             margin-top: 12.5px;
             background-color: #ffffff;
-            border:0 !important;
+            border: 0 !important;
         }
 
-        .stick-fixed{
-            position:fixed !important;
-            top:50px !important;
-            z-index:9990;
-        }
+.stick-fixed {
+    position: fixed !important;
+    top: 50px !important;
+    z-index: 9990;
+}
+
+.tile.blue {
+    background-color: lightblue;
+}
+
+.tile.brown {
+    background-color: saddlebrown;
+}
+
+.tile.green {
+    background-color: lightgreen;
+}
+
+.tile.red {
+    background-color: indianred;
+}
+
+.tile.black {
+    background-color: black;
+}
+
+.tile.purple {
+    background-color: mediumpurple;
+}

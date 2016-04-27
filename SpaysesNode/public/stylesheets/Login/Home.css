@@ -7,10 +7,10 @@ body {
     padding: 0px !important;
     margin: 0px !important;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /*background-color: white;*/
+    background-color: white;
     /*background-color:#282626;*/
     /*background-color: #1f1f1f;*/
-    background-color: #181818;
+    /*background-color: #181818;*/
     overflow-y: auto;
 }
 
@@ -162,15 +162,12 @@ body {
     width: 200px;
     left: -200px;
     height: 100%;
-    /*background-color: #282626;*/
-    background-color: #e6e6e6;
+    background-color: #282626;
     z-index: 9999;
     display: flex;
     -webkit-align-content: center;
     -webkit-align-items: center;
     justify-content: center;
-    /*border-right:1px solid black;*/
-    /* -webkit-justify-content: center; */
 }
 
     #side-menu ul {
@@ -200,8 +197,6 @@ body {
                 min-width: 100px;
                 border-color: #47bab3;
             }
-
-
 
 
 /*BODY*/

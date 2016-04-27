@@ -7,6 +7,11 @@ $(function () {
     //InitStickyHeader();
     
     InitSideMenu();
+
+    $('.tile').mosaic({
+        opacity		: 0.8			//Opacity for overlay (0-1)
+    });
+
 });
 
 function InitStickyHeader() {

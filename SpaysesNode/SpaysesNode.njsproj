@@ -47,6 +47,7 @@
     <Compile Include="public\javascripts\Plugins\jquery.mCustomScrollbar.min.js" />
     <Compile Include="public\javascripts\Plugins\jQuery.scrollSpeed.js" />
     <Compile Include="public\javascripts\Plugins\jquery.stickem.js" />
+    <Compile Include="public\javascripts\Plugins\mosaic.1.0.1.min.js" />
     <Compile Include="routes\index.js" />
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +59,7 @@
     <Content Include="public\stylesheets\Login\OriginalHoverEffects.zip" />
     <Content Include="public\stylesheets\Login\SignUp.css" />
     <Content Include="public\stylesheets\Plugins\jquery.mCustomScrollbar.min.css" />
+    <Content Include="public\stylesheets\Plugins\mosaic.css" />
     <Content Include="public\stylesheets\Plugins\screen.css" />
     <Content Include="public\stylesheets\style.css" />
     <None Include="spayses - Web Deploy.pubxml" />

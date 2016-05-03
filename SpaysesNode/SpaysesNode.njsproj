@@ -38,6 +38,7 @@
     <Content Include="public\images\9997944383_ea7eee16fa_k.jpg" />
     <Content Include="public\images\cooltext178838751674676.png" />
     <Content Include="public\images\MenuIcon.png" />
+    <Content Include="public\images\search-icon.png" />
     <Content Include="public\images\SpaysesIco.png" />
     <Content Include="public\images\Tower.png" />
     <Compile Include="public\javascripts\chat.js" />

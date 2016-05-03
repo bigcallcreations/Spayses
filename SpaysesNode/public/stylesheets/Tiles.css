@@ -9,6 +9,7 @@
 
     .tile-group .header {
         float: left;
+        /*color: #47bab3;*/
         color: #47bab3;
         height: 40px;
         line-height: 40px;
@@ -28,10 +29,11 @@
             border: none;
             /*border-bottom: 1px solid rgba(255,255,255,0.08);
             border-top: 1px solid rgba(0,0,0,0.9);*/
-            border-bottom: 1px solid #47bab3;
+            /*border-bottom: 1px solid #47bab3;*/
+            /*border-bottom: 1px solid #46494c;*/
             margin: 0;
             clear: both;
-            padding-bottom: 10px;
+            /*padding-bottom: 10px;*/
             width: 40%;
             margin-left: 30%;
         }

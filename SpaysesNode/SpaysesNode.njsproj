@@ -45,21 +45,30 @@
     <Compile Include="public\javascripts\login.js" />
     <Compile Include="public\javascripts\Home.js" />
     <Compile Include="public\javascripts\jquery-2.2.3.min.js" />
+    <Compile Include="public\javascripts\Plugins\jquery.finaltilesgallery.js" />
     <Compile Include="public\javascripts\Plugins\jquery.mCustomScrollbar.min.js" />
     <Compile Include="public\javascripts\Plugins\jQuery.scrollSpeed.js" />
     <Compile Include="public\javascripts\Plugins\jquery.stickem.js" />
+    <Compile Include="public\javascripts\Plugins\lightbox2.js" />
     <Compile Include="public\javascripts\Plugins\mosaic.1.0.1.min.js" />
     <Compile Include="routes\index.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="public\images\6814029-tumblr-backgrounds.jpg" />
+    <Content Include="public\stylesheets\img\close.png" />
+    <Content Include="public\stylesheets\img\loading.gif" />
+    <Content Include="public\stylesheets\img\next.png" />
+    <Content Include="public\stylesheets\img\prev.png" />
     <Content Include="public\stylesheets\Login\ForgotPassword.css" />
     <Content Include="public\stylesheets\Login\Home.css" />
     <Content Include="public\stylesheets\Login\ImageEffects.css" />
     <Content Include="public\stylesheets\Login\Login.css" />
     <Content Include="public\stylesheets\Login\OriginalHoverEffects.zip" />
     <Content Include="public\stylesheets\Login\SignUp.css" />
+    <Content Include="public\stylesheets\Plugins\finaltilesgallery.css" />
     <Content Include="public\stylesheets\Plugins\jquery.mCustomScrollbar.min.css" />
+    <Content Include="public\stylesheets\Plugins\lightbox2.css" />
+    <Content Include="public\stylesheets\Plugins\main.css" />
     <Content Include="public\stylesheets\Plugins\mosaic.css" />
     <Content Include="public\stylesheets\Plugins\screen.css" />
     <Content Include="public\stylesheets\style.css" />
@@ -115,6 +124,7 @@
     <Folder Include="bin\" />
     <Folder Include="public\javascripts\Plugins\" />
     <Folder Include="public\stylesheets\Login\" />
+    <Folder Include="public\stylesheets\img\" />
     <Folder Include="public\stylesheets\Plugins\" />
     <Folder Include="views\htmlViews\" />
     <Folder Include="public\" />

@@ -92,11 +92,8 @@ body {
         line-height: 30px;
         float: right !important;
         margin-top: 17.5px !important;
-        /*margin-right:50px;*/
         width: auto;
         cursor: pointer;
-        /*border:1px solid lightgrey;
-        border-radius:0;*/
     }
 
         #menu-top-header .search-header div {
@@ -152,7 +149,6 @@ body {
         border: 0;
         background-color: #828282;
         color: white !important;
-        /*background-color: black !important;*/
         -webkit-box-shadow: 0 0 0px 1000px #828282 inset;
         -webkit-text-fill-color: white !important;
         color: #1d1d1d;

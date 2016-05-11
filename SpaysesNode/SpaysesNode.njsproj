@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="public\images\6814029-tumblr-backgrounds.jpg" />
+    <Content Include="public\stylesheets\Chat.css" />
     <Content Include="public\stylesheets\img\close.png" />
     <Content Include="public\stylesheets\img\loading.gif" />
     <Content Include="public\stylesheets\img\next.png" />

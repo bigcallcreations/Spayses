@@ -1,5 +1,5 @@
 ﻿
-<style>
+<!--<style>
     .container {
         padding: 0 !important;
         margin: 0 !important;
@@ -108,7 +108,7 @@
         line-height: 1.4;
         word-wrap: break-word;
     }
-</style>
+</style>-->
 
 <script src="/socket.io/socket.io.js"></script>
 <script src="/javascripts/jquery-1.10.2.js"></script>
@@ -123,7 +123,7 @@
     });
 </script>
 
-<div class="nameWindow" style="height:100%; width:100%; ">
+<!--<div class="nameWindow" style="height:100%; width:100%; ">
 
     <div style="margin-top:25px; width:300px; margin-left:auto; margin-right:auto; position:relative;">
         <p style="height:100px; width:100%; text-align:center">Enter Your Name</p>
@@ -132,14 +132,23 @@
         <br />
         <button id="start" style="margin-top:20px;margin-left:auto; margin-right:auto; position:relative;">Start Chatting</button>
     </div>
-</div>
+</div>-->
 
-<div class="chatWindow" style="height:100%; width:100%; display:none;">
+<div class="chatWindow">
 
-    <ul id="messages"></ul>
+    <div class="chat-content">
+        <div class="chat-window">
+            <h6>Chat Name</h6>
+            <ul id="messages"></ul>
+        </div>
+        <div class="user-content">
+            <h6>Users</h6>
+            <ul id="users"></ul>
+        </div>
+    </div>
 
-    <form class="testchat" action="">
-        <input id="m" autocomplete="off" /><button>Send</button>
+    <form class="chat-form" action="">
+        <input type="text" id="m" autocomplete="off" /><button class="spayses-btn">Send</button>
     </form>
 
 </div>

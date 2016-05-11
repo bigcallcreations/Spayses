@@ -1,0 +1,106 @@
+﻿/** {
+	margin:0;
+	padding:0;
+	border:none;
+	outline:none;
+}*/
+
+.chatWindow {
+    float: left;
+    height: 100%;
+    width: 100%;
+    margin-top: 80px;
+    height: 550px;
+}
+
+    .chatWindow .chat-content {
+        width: 100%;
+        height: calc(100% - 70px);
+        float: left;
+        background-color: #46494c;
+        padding:0 10px;
+    }
+
+        .chatWindow .chat-content .chat-window {
+            width: calc(100% - 200px);
+            height: 100%;
+            float: left;
+        }
+
+            .chatWindow .chat-content .chat-window h6 {
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                width: 100%;
+                margin: 0;
+                color: #47bab3;
+                font-size: 14px;
+            }
+
+            .chatWindow .chat-content .chat-window ul {
+                height: calc(100% - 50px);
+                margin: 10px;
+                margin-top: 0;
+                background-color: white;
+                padding: 10px;
+            }
+
+    .chatWindow .user-content {
+        width: 200px;
+        height: 100%;
+        float: right;
+    }
+
+        .chatWindow .user-content h6 {
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            width: 100%;
+            margin: 0;
+            color: #47bab3;
+            font-size: 14px;
+        }
+
+        .chatWindow .user-content ul {
+            height: calc(100% - 50px);
+            margin: 10px;
+            margin-top: 0;
+            background-color: white;
+            padding: 10px;
+        }
+
+    .chatWindow .chat-form {
+        height: 70px;
+        width: 100%;
+        float: left;
+        background-color: #46494c;
+        padding:0 10px 10px 10px;
+    }
+
+        .chatWindow .chat-form input[type=text] {
+            float: left;
+            width: calc(100% - 220px);
+            height: 40px;
+            margin:10px;
+            padding-left:20px;
+        }
+
+        .chatWindow .chat-form .spayses-btn {
+            color: #47bab3;
+            border:1px solid #47bab3;
+            float:left;
+            /*position: relative;*/
+            /*border-radius: 50px;*/
+            /*width: 100%;*/
+            width:180px;
+            height: 40px;
+            /*margin: 10px 75px;*/
+            /*background-color: #53b4b0;*/
+            /*color: white;*/
+            background-color:transparent;
+            margin:10px;
+            box-shadow: none;
+            /*border: none;*/
+            font-size: 14px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }

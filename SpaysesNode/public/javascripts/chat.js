@@ -13,8 +13,8 @@ $(function () {
         if (data.user == m_name)
             who = "me";
 
-        addMessage(who, data.message, data.user);
-        scrollToBottom();
+        //addMessage(who, data.message, data.user);
+        //scrollToBottom();
     });
 
     socket.on('userConnected', function (data) {
@@ -22,7 +22,7 @@ $(function () {
         if (data.user == m_name)
             who = "me";
 
-        addMessage("userAdded", data);
+        //addMessage("userAdded", data);
         //scrollToBottom();
     });
 

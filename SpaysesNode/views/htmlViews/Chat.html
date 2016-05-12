@@ -1,118 +1,6 @@
-﻿
-<!--<style>
-    .container {
-        padding: 0 !important;
-        margin: 0 !important;
-        background-color: #f0f1f3;
-        max-height: unset !important;
-        height: 100%;
-        width: 100%;
-        max-width: unset !important;
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font: 13px Helvetica, Arial;
-    }
-
-    form {
-        background: #000;
-        padding: 3px;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-    }
-
-        form input {
-            border: 0;
-            padding: 10px;
-            width: 90%;
-            margin-right: .5%;
-        }
-
-        form button {
-            width: 9%;
-            background: rgb(130, 224, 255);
-            border: none;
-            padding: 10px;
-        }
-
-    #messages {
-        list-style-type: none;
-        margin: 0;
-        padding: 0 50px;
-        position: relative;
-        width: 700px;
-        margin: 0 auto 50px;
-    }
-
-    .me {
-        clear: both;
-        float: left;
-        margin-bottom: 10px;
-    }
-
-    .you {
-        clear: both;
-        float: right;
-        margin-bottom: 10px;
-    }
-
-    .userAdded{
-        width:100%;
-        text-align:center;
-    }
-
-        .you .image, .me .image {
-            margin-bottom: 5px;
-        }
-
-    #messages .me p {
-        text-align: left;
-        float: left;
-        display: inline-block;
-        /*margin-left: 20px;*/
-        margin-bottom: 30px;
-        padding: 25px 34px;
-        min-width: 160px;
-        min-height: 10px;
-        max-width: 510px;
-        background-color: #FFF;
-        border-radius: 3px;
-        box-shadow: 0px 3px 3px #E3E4E6;
-        color: #637277;
-        line-height: 1.4;
-        word-wrap: break-word;
-    }
-
-    #messages .you p {
-        text-align: left;
-        float: left;
-        display: inline-block;
-        /*margin-right: 20px;*/
-        margin-bottom: 30px;
-        padding: 25px 34px;
-        min-width: 160px;
-        min-height: 10px;
-        max-width: 510px;
-        background-color: #FFF;
-        border-radius: 3px;
-        box-shadow: 0px 3px 3px #E3E4E6;
-        color: #637277;
-        line-height: 1.4;
-        word-wrap: break-word;
-    }
-</style>-->
-
-<script src="/socket.io/socket.io.js"></script>
+﻿<script src="/socket.io/socket.io.js"></script>
 <script src="/javascripts/jquery-1.10.2.js"></script>
-
+<link href="/stylesheets/Chat.css" rel="stylesheet" />
 
 <script>
     var socket = io();
@@ -138,12 +26,16 @@
 
     <div class="chat-content">
         <div class="chat-window">
-            <h6>Chat Name</h6>
-            <ul id="messages"></ul>
+            <div class="chat-container">
+                <h6>Worms Delish Body</h6>
+                <ul id="messages"></ul>
+            </div>
         </div>
         <div class="user-content">
-            <h6>Users</h6>
-            <ul id="users"></ul>
+            <div class="chat-container">
+                <h6>Users</h6>
+                <ul id="users"></ul>
+            </div>
         </div>
     </div>
 

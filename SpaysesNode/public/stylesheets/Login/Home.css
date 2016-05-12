@@ -3,6 +3,15 @@
     src: url('../fonts/Chasing Embers Demo Version.ttf') format('truetype');
 }
 
+*:focus, *:hover {
+    outline: none;
+    text-decoration:none !important;
+}
+
+*{
+    text-transform:lowercase !important;
+}
+
 .spayses-color {
     color: #1985A1 !important;
 }
@@ -13,10 +22,16 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #DCDCDD;
     overflow-y: auto;
+    height:100%;
+    float:left;
+    width:100%;
 }
 
 .container {
     padding: 0 !important;
+    top: -20px;
+    position:relative;
+    margin-top:70px;
 }
 
 #menu-top-header {
@@ -67,7 +82,6 @@ body {
         margin-top: 15px;
         margin-right: 20px;
         background-color: #eeecec;
-        /*border: 0 !important;*/
         color: black;
         padding: 5px 10px;
         font-size: 12px;
@@ -81,34 +95,40 @@ body {
         color: #47bab3;
         font-size: 14px;
         margin-right: 20px;
-        height: 25px;
+        height: 30px;
         line-height: 25px;
-        margin-top: 17.5px;
+        margin-top: 20px;
+        cursor:pointer;
     }
 
     #menu-top-header .search-header {
-        margin: 0 !important;
-        height: 30px;
-        line-height: 30px;
+        margin: 0;
+        height: 40px;
+        line-height: 35px;
         float: right !important;
-        margin-top: 17.5px !important;
+        margin-top: 15px !important;
         width: auto;
         cursor: pointer;
+        padding-right:20px;
+        background-color:#595c5e;
+        margin-right:80px;
     }
 
         #menu-top-header .search-header div {
             float: left;
             height: 100%;
             width: auto;
-            padding: 0 10px;
+            padding: 0 20px;
             font-size: 18px;
             color: #c7c5c5;
-            padding-right: 35px !important;
+            padding-right: 40px !important;
             background-image: url('/images/search-icon.png');
-            background-position: right center;
+            background-position: right 6px;
             background-repeat: no-repeat;
             background-size:27px;
-            margin-right:80px;
+            
+            
+            /*border-radius:15px;*/
         }
 
             #menu-top-header .search-header div:first-of-type {
@@ -133,8 +153,6 @@ body {
             #menu-top-header .search-header .form-group span {
                 height: 25px;
                 line-height: 25px;
-                /*margin-top: 5px;
-            border-radius:0px;*/
             }
 
     #menu-top-header .has-feedback .form-control {
@@ -163,7 +181,6 @@ body {
     width: 200px;
     left: -200px;
     height: 100%;
-    /*background-color: #282626;*/
     background-color: #4c5c68;
     z-index: 9999;
     display: flex;
@@ -187,7 +204,6 @@ body {
                 font-weight: 100;
                 letter-spacing: 2px;
                 font-size: 18px;
-                /*color: rgb(200, 200, 200);*/
                 color: #47bab3;
                 text-decoration: none;
                 margin: 0 20px;
@@ -208,20 +224,17 @@ body {
 }
 
 #home-container {
-    margin-top: 50px;
+    /*margin-top: 50px;*/
     float: left;
     height: calc(100% - 50px);
     width: 100%;
     background-color: transparent;
-    /*overflow-y:auto;*/
 }
 
     #home-container .inner-container {
         position: relative;
         height: auto;
-        /*width: 1000px;*/
         width: 100%;
-        /*margin: 0 auto;*/
         background-color: transparent;
     }
 

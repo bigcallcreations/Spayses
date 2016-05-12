@@ -12,9 +12,9 @@ $(function () {
     //    opacity		: 0.8			//Opacity for overlay (0-1)
     //});
 
-    $('.tile-grp').finalTilesGallery({
-        imageSizeFactor: [[4000, .9], [1024, .8], [800, .7], [600, .4], [480, .2], [320, .1]]
-    });
+    //$('.tile-grp').finalTilesGallery({
+    //    imageSizeFactor: [[4000, .9], [1024, .8], [800, .7], [600, .4], [480, .2], [320, .1]]
+    //});
 
 });
 

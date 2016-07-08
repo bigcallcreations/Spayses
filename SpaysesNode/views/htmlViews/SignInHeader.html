@@ -1,11 +1,19 @@
-﻿<div id="login-top-header">
+﻿<script src="/socket.io/socket.io.js"></script>
+
+<div id="login-top-header">
 
     <div class="spaces-font login-spaces-font">
-        <a class="spaces-font" href="/Home">Spayses</a>
+        <a class="spaces-font" href="/Home">Spayses <%=message%></a>
     </div>
 
     <div id="login-form">
-        <button class="si-btn">Sign In</button>
+        <form action="/SignIn" method="post" style="height:50px;">
+            <input type="email" name="email" id="email" placeholder="Email" class="login-input" />
+            <input type="password" name="password" id="password" placeholder="Password" class="login-input" />
+            <!--<p id="aha"><a class="fp-btn">Forgot Password?</a></p>-->
+            <button class="si-btn">Sign In</button>
+        </form>
+
         <button class="su-btn" style="">Sign Up</button>
     </div>
 
@@ -37,11 +45,22 @@
     <a id="close">X</a>
 
     <form action="/AddUser" method="post">
+
+        <!--<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>-->
+        <div class="fb-container">
+            <div class="fb-icon-bg"></div>
+            <div class="fb-bg" href="#" onclick="fb_login();">sign in with facebook</div>
+        </div>
+        <p style="width:100%; text-align:center; color:white; font-size:16px;"><span>OR</span></p>
         <input type="text" name="username" id="username" placeholder="Username" class="login-input" />
+        <div class="validationMsg validationMsg-username"></div>
         <input type="email" name="email" id="email" placeholder="Email" class="login-input" />
+        <div class="validationMsg validationMsg-email"></div>
         <input type="password" name="password" id="password" placeholder="Password" class="login-input" />
         <input type="password" name="varifypassword" id="varify-password" placeholder="Confirm Password" class="login-input" />
-        <button id="registerbtn">Register</button>
+        <button type="submit" id="registerbtn">Register</button>
+
     </form>
 
     <p id="aha">Already have an account? <a class="si-btn">Sign In</a></p>

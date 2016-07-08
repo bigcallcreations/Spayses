@@ -4,9 +4,15 @@
  */
 
 //#region Sign In Pages
+var User = require('../models/Users.js');
 
 exports.index = function (req, res) {
-    res.render('index', { title: 'Express', year: new Date().getFullYear() });
+    //Do check based on cookies to see if they have logged in lately
+    if (req.session && req.session._id) {
+        res.render('Home', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
+    }
+
+    res.render('index', { title: 'Express', year: new Date().getFullYear(), message: 'Your contact page' });
 };
 
 exports.SignUp = function (req, res) {
@@ -18,11 +24,49 @@ exports.ForgotPassword = function (req, res) {
 };
 
 exports.home = function (req, res) {
-    res.render('Home', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
+    if (req.session._id) {
+        res.render('Home', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
+    }
+    
+    res.redirect('/');
+};
+
+exports.Verify = function (req, res) {
+    
+    User.RemoveVerificationToken(req.params.id, function (err, success) {
+        
+        if (err) res.render('Verify', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
+
+        if (success) {
+            res.render('Home', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
+        } else {
+            res.render('Verify', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
+        }
+    });
 };
 
 //#endregion
 
 exports.contact = function (req, res) {
     res.render('contact', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
+};
+
+exports.CheckUsername = function (req, res) {
+    User.CheckIfUsernameExists(req.params.username, function (err, exists) {
+        if (exists) {
+            res.send(true);
+        } else {
+            res.send(false);
+        }
+    });
+};
+
+exports.CheckEmail = function (req, res) {
+    User.CheckIfEmailExists(req.params.email, function (err, exists) {
+        if (exists) {
+            res.send(true);
+        } else {
+            res.send(false);
+        }
+    });
 };

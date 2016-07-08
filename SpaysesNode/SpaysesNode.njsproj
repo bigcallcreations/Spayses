@@ -37,10 +37,16 @@
     <Content Include="public\images\8274728646_555f9eab3a_k.jpg" />
     <Content Include="public\images\9997944383_ea7eee16fa_k.jpg" />
     <Content Include="public\images\cooltext178838751674676.png" />
+    <Content Include="public\images\facebookico.png" />
+    <Content Include="public\images\facebook_circle_color-128.png" />
     <Content Include="public\images\MenuIcon.png" />
     <Content Include="public\images\search-icon.png" />
     <Content Include="public\images\SpaysesIco.png" />
     <Content Include="public\images\Tower.png" />
+    <Compile Include="lib\Crypto.js" />
+    <Compile Include="lib\db.js" />
+    <Compile Include="lib\Email.js" />
+    <Compile Include="models\Users.js" />
     <Compile Include="public\javascripts\chat.js" />
     <Compile Include="public\javascripts\login.js" />
     <Compile Include="public\javascripts\Home.js" />
@@ -109,11 +115,13 @@
     <Content Include="README.md" />
     <Content Include="views\contact.jade" />
     <Content Include="views\htmlViews\TopHeader.html" />
+    <Content Include="views\htmlViews\Verify.html" />
     <Content Include="views\TopHeader.jade" />
     <Content Include="views\SignUp.jade" />
     <Content Include="views\htmlViews\SignInHeader.html" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
+    <Content Include="views\Verify.jade" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config" />
     <Content Include="bin\ChangeConfig.ps1" />
@@ -123,6 +131,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
+    <Folder Include="models\" />
+    <Folder Include="lib\" />
     <Folder Include="public\javascripts\Plugins\" />
     <Folder Include="public\stylesheets\Login\" />
     <Folder Include="public\stylesheets\img\" />

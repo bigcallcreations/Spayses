@@ -7,23 +7,23 @@ body {
     float: left;
     height: 100%;
     width: 100%;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-image: url(../../../../images/6814029-tumblr-backgrounds.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
 }
 
-.container{
-    max-width:unset !important;
-    padding:0 !important;
+.container {
+    max-width: unset !important;
+    padding: 0 !important;
 }
 
 #login-top-header {
     width: 100%;
     height: 50px;
     background-color: black;
-        top: 0;
+    top: 0;
     position: absolute;
     /*border-bottom: 1px solid #47bab3;
     border-top: 1px solid #47bab3;*/
@@ -44,6 +44,7 @@ body {
         float: right;
         width: auto;
         height: 100%;
+        display: inline-flex;
     }
 
         #login-top-header #login-form label {
@@ -56,9 +57,10 @@ body {
         }
 
         #login-top-header #login-form input[type=text],
-        #login-top-header #login-form input[type=password] {
+        #login-top-header #login-form input[type=password],
+        #login-top-header #login-form input[type=email] {
             width: 200px;
-            height: 30px;
+            height: 25px;
             margin-top: 10px;
             margin-right: 20px;
             background-color: #eeecec;
@@ -87,6 +89,7 @@ body {
             font-size: 14px;
             height: 100%;
             line-height: 100%;
+            outline: none;
         }
 
         #login-top-header #login-form .fp-btn {
@@ -193,7 +196,7 @@ body {
             border: none;
             font-size: 14px;
             /*font-family: "Gotham SSm A","Gotham SSm B",Helvetica,Arial,sans-serif;*/
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
 
 #test {
@@ -314,7 +317,7 @@ body {
                 border: none;
                 font-size: 14px;
                 /*font-family: "Gotham SSm A","Gotham SSm B",Helvetica,Arial,sans-serif;*/
-                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             }
 
 .si-modal {
@@ -426,8 +429,23 @@ body {
     box-shadow: none;
     border: none;
     font-size: 14px;
-    /*font-family: "Gotham SSm A","Gotham SSm B",Helvetica,Arial,sans-serif;*/
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+    #registerbtn.disabled {
+        background-color: #0b3836;
+    }
+
+.validationMsg {
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    color: red;
+    padding-top: 5px;
+}
+
+.input-validation-err {
+    border: 1px solid red !important;
 }
 
 #aha {
@@ -472,7 +490,7 @@ body {
     color: white;
     font-size: 14px;
     /*font-family: "Gotham SSm A","Gotham SSm B",Helvetica,Arial,sans-serif;*/
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
 }
 
@@ -666,11 +684,11 @@ body {
         margin: 0 !important;
     }
 
-    .login-spaces-font a {
-        width: 100% !important;
-        text-align: center;
-        margin: 0 !important;
-    }
+        .login-spaces-font a {
+            width: 100% !important;
+            text-align: center;
+            margin: 0 !important;
+        }
 }
 
 
@@ -771,3 +789,69 @@ body {
 .jssora22r.jssora22rdn {
     background-position: -310px -31px;
 }
+
+
+/*Facebook Button*/
+
+/* Facebook */
+.fb-container {
+    position: relative;
+    width: 241px;
+    /*margin-left: 10%;*/
+    margin-left:calc(50% - 120px);
+}
+
+.fb-icon-bg {
+    background: #354f88;
+    height: 37px;
+    margin: 0 0 -37px 0;
+    width: 41px;
+    background-image:url('../../../../images/facebook_circle_color-128.png');
+    background-size:41px 37px;
+    background-repeat:no-repeat;
+}
+
+    .fb-icon-bg:after {
+        /*content: url('../../../../images/facebookico.png');*/
+        display: block;
+        padding: 9px 10px 5px 15px;
+    }
+
+.fb-bg {
+    background: #3b5998;
+    display: block;
+    height: 37px;
+    line-height: 37px;
+    margin: 0 0 30px 41px;
+    width: 200px;
+
+    color: #fff;
+        /*font-family: 'Oswald', sans-serif;*/
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-transform: uppercase;
+        font-size:14px;
+        text-align:center;
+    /*width: calc(100% - 41px);*/
+}
+
+    .fb-bg:after {
+        /*color: #fff;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-size:14px;*/
+
+
+        height: 37px;
+        left: 8%;
+        position: relative;
+        top: 22%;
+        width: 41px;
+    }
+
+    .fb-bg:hover {
+        cursor: pointer;
+    }
+
+    .fb-bg:active {
+        background: #354f88;
+    }

@@ -66,6 +66,14 @@
         }
     });
     
+    $('.resendVerify').on('click', function () { 
+        socket.emit('resendverify');
+    })
+    
+    socket.on('resendverifycomfirm', function (data) {
+        alert(data);
+    });
+    
     function errorCount(add) {
         if (add) errCount++;
         else {

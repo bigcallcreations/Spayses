@@ -69,15 +69,16 @@ UserSchema.pre('save', true, function (next, done) {
 module.exports.addUser = addUser;
 module.exports.CheckIfUsernameExists = CheckIfUsernameExists;
 module.exports.CheckIfEmailExists = CheckIfEmailExists;
-module.exports.CheckIfUserExists = CheckIfUserExists; RemoveVerificationToken
-module.exports.RemoveVerificationToken = RemoveVerificationToken;
+module.exports.CheckIfUserExists = CheckIfUserExists; 
+module.exports.RemoveVerificationToken = RemoveVerificationToken; 
+module.exports.GetUser = GetUser; 
 
 //#endregion
 
 //#region Methods
 
 // Add user to database 
-function addUser(username, password, email, req, callback) {
+function addUser(username, password, email, callback) {
     var rand = Math.floor((Math.random() * 100) + 54);
     
     var instance = new User();
@@ -86,7 +87,7 @@ function addUser(username, password, email, req, callback) {
     instance.email = email;
     instance.VerificationToken = rand;
     
-    emailer.SendVerificationEmail(req, username, rand, email, function (err) {
+    emailer.SendVerificationEmail(username, rand, email, function (err) {
         if (!err) {
             instance.save(function (err) {
                 if (err) {
@@ -168,7 +169,7 @@ function CheckIfEmailExists(eMail, callback) {
 
 //Check if user exists
 function CheckIfUserExists(req, sEmail, sPassword, callback) {
-    User.findOne({ email: sEmail, password: crypto.encrypt(sPassword) }, 'username verificationToken _id', function (err, user) {
+    User.findOne({ email: sEmail, password: crypto.encrypt(sPassword) }, 'username verificationToken id', function (err, user) {
         if (err) {
             callback(err, false, false);
         } else if (user) {
@@ -181,6 +182,15 @@ function CheckIfUserExists(req, sEmail, sPassword, callback) {
         } else {
             callback(null, false, false);
         }
+    });
+}
+
+function GetUser(_id, callback) {
+    User.findOne({ _id: _id }, '_id username verificationToken email', function (err, user) {
+        if (err)
+            callback(err, user);
+        else
+            callback(null, user);
     });
 }
 

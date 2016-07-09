@@ -16,6 +16,7 @@ var User = require('./models/Users.js');
 //var db = require('./lib/db.js');
 var Crypto = require('./lib/Crypto.js');
 var bodyParser = require('body-parser');
+var Emailer = require('./lib/Email.js');
 
 
 // all environments
@@ -43,6 +44,7 @@ app.get('/Home', routes.home);
 app.get('/api/user/:username', routes.CheckUsername);
 app.get('/api/email/:email', routes.CheckEmail);
 app.get('/Verify/:id', routes.Verify);
+app.get('/ResendVerify', routes.ResendVerify);
 
 //for chat
 var serve = http.createServer(app);
@@ -58,7 +60,27 @@ io.on('connection', function (socket) {
     socket.on('chat', function (msg) {
         io.emit('chat', msg);
     });
+
+    socket.on('resendverify', function () {
+        //var id = req.session ? req.session._id : '577e1373d2419f0c2438d504';
+        var id = '577e1373d2419f0c2438d504';
+        
+        User.GetUser(id, function (err, user) {
+            if (err) {
+                io.emit('resendverifycomfirm', "Unable to send email.");
+            } else {
+                Emailer.SendVerificationEmail(user.username, user.verificationToken, user.email, function () { 
+                    if(error)
+                        io.emit('resendverifycomfirm', "Unable to send email.");
+                    else
+                        io.emit('resendverifycomfirm', "Email Sent.");
+                });
+            }
+        })
+    });
 });
+
+
 
 //#region User
 
@@ -76,7 +98,7 @@ app.post('/SignIn', function (req, res) {
                 res.end();
             }
             else {
-                io.emit('test', "TEST");
+                res.render('Verify', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
                 //socket.emit('chat', { message: $('#m').val(), user: m_name });
                 //res.end();
                 
@@ -98,9 +120,13 @@ app.post('/AddUser', function (req, res) {
     
     if (password != varifypassword) res.end("Passwords need to be the same.");
     
-    User.addUser(username, password, email, req, function (err, user) {
+    User.addUser(username, password, email, function (err, user) {
         if (err) res.end(err.toString());
-        else res.redirect('/Home');
+        else {
+            req.session._id = user._id;
+            res.render('Verify', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
+            //res.redirect('/Home');
+        }
     });
 })
 

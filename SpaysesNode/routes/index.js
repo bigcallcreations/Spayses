@@ -5,6 +5,7 @@
 
 //#region Sign In Pages
 var User = require('../models/Users.js');
+var Emailer = require('../lib/Email.js');
 
 exports.index = function (req, res) {
     //Do check based on cookies to see if they have logged in lately
@@ -32,17 +33,21 @@ exports.home = function (req, res) {
 };
 
 exports.Verify = function (req, res) {
-    
-    User.RemoveVerificationToken(req.params.id, function (err, success) {
+    res.render('Verify', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
+    //User.RemoveVerificationToken(req.params.id, function (err, success) {
         
-        if (err) res.render('Verify', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
+    //    if (err) res.render('Verify', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
 
-        if (success) {
-            res.render('Home', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
-        } else {
-            res.render('Verify', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
-        }
-    });
+    //    if (success) {
+    //        res.render('Home', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
+    //    } else {
+    //        res.render('Verify', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
+    //    }
+    //});
+};
+
+exports.ResendVerify = function (req, res) {
+    
 };
 
 //#endregion

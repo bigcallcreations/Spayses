@@ -22,9 +22,10 @@ module.exports.SendEmail = SendEmail;
 
 //#region Methods
 
-function SendVerificationEmail(req, username, verifyId, emailTo, callback) {
-    host = req.get('host');
-    link = "http://" + req.get('host') + "/Verify/" + verifyId;
+function SendVerificationEmail(username, verifyId, emailTo, callback) {
+    //host = req.get('host');
+    host = 'localhost:1337';
+    link = "http://" + host + "/Verify/" + verifyId;
     mailOptions = {
         from: 'dwormald12@gmail.com',
         to : 'dwormald12@gmail.com',

@@ -1,3 +1,62 @@
-﻿<div>
-    VERIFIED BITCH
+﻿
+
+<div id="login-top-header">
+
+    <div class="spaces-font login-spaces-font">
+        <a class="spaces-font" href="/Home">Spayses</a>
+    </div>
+
+    <div id="login-form">
+        <form action="/SignIn" method="post" style="height:50px;">
+            <input type="email" name="email" id="email" placeholder="Email" class="login-input" />
+            <input type="password" name="password" id="password" placeholder="Password" class="login-input" />
+            <button class="si-btn">Sign In</button>
+        </form>
+
+        <button class="su-btn" style="">Sign Up</button>
+    </div>
+
+    <div id="mob-login-form">
+        <a href="/Login/SignIn" id="si">Sign In</a>
+        <a href="/Login/Register" class="su-mob">Sign Up</a>
+    </div>
+
 </div>
+<div class="verifyWrapper">
+    <h3>
+        You must verify your email address to continue
+    </h3>
+
+    <div>
+        <p>
+            Please click on the link that has been sent to your email account to verify your email to finish the registration process.
+        </p>
+        <br />
+        <p>
+            If you have haven't recieved an email <span class="resendVerify">click here to resend.</span>
+        </p>
+    </div>
+</div>
+
+<style>
+    .body-content {
+        height: calc(100%);
+        background-color: white;
+        overflow:hidden;
+    }
+
+    .verifyWrapper {
+        padding-top: 10px;
+        height: 100%;
+        margin: 0 auto; 
+        width: 800px;        
+        margin-top: 31px;
+    }
+
+    .verifyWrapper div p .resendVerify{
+        color: #47bab3 !important;
+        cursor:pointer;
+    }
+
+    
+</style>

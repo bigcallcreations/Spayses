@@ -67,13 +67,31 @@ io.on('connection', function (socket) {
         
         User.GetUser(id, function (err, user) {
             if (err) {
-                io.emit('resendverifycomfirm', "Unable to send email.");
+                io.emit('resendverifycomfirm_error', "Unable to send email.");
             } else {
-                Emailer.SendVerificationEmail(user.username, user.verificationToken, user.email, function () { 
-                    if(error)
-                        io.emit('resendverifycomfirm', "Unable to send email.");
+                Emailer.SendVerificationEmail(user.username, user.verificationToken, user.email, function (err) { 
+                    if(err)
+                        io.emit('resendverifycomfirm_error', "Email could not be sent. Please enter your email address in the field below and click 'Resend Email'.");
                     else
-                        io.emit('resendverifycomfirm', "Email Sent.");
+                        io.emit('resendverifycomfirm_success', "An confirmation email has been sent to <strong>" + user.email + "</strong>. Click on the link in the email to activate you account.");
+                });
+            }
+        })
+    });
+
+    socket.on('resendverifywemail', function (data) {
+        //var id = req.session ? req.session._id : '577e1373d2419f0c2438d504';
+        var id = '577e1373d2419f0c2438d504';
+        
+        User.GetUserUsingEmail(data.email, function (err, user) {
+            if (err) {
+                io.emit('resendverifycomfirm_error', "Unable to send email.");
+            } else {
+                Emailer.SendVerificationEmail(user.username, user.verificationToken, user.email, function (err) {
+                    if (err)
+                        io.emit('resendverifycomfirm_error', "Unable to send email.");
+                    else
+                        io.emit('resendverifycomfirm_success', "An confirmation email has been sent to <strong>" + user.email + "</strong>. Click on the link in the email to activate you account.");
                 });
             }
         })

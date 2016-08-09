@@ -36,27 +36,53 @@
             If you have haven't recieved an email <span class="resendVerify">click here to resend.</span>
         </p>
     </div>
+
+    <div id="success" class="alert alert-success">
+    </div>
+
+    <div id="error" class="alert alert-danger">
+        Email could not be sent. Please enter your email address in the field below and click 'Resend'
+    </div>
+
+    <form id="resendEmailContainer" class="form-inline" role="form">
+        <div class="form-group">
+            <label class="sr-only" for="exampleInputEmail2">Email address</label>
+            <input type="email" class="form-control" id="reverifyEmailInput" placeholder="Enter email">
+        </div>
+        <button id="resendEmail" type="submit" class="btn btn-default">Resend Email</button>
+    </form>
+
+    <!--<div id="resendemailfield">
+        <input type="email" id="resendemail" />
+        <button id="resendEmail">Resend Email</button>
+    </div>-->
 </div>
 
 <style>
     .body-content {
         height: calc(100%);
         background-color: white;
-        overflow:hidden;
+        overflow: hidden;
     }
 
     .verifyWrapper {
         padding-top: 10px;
         height: 100%;
-        margin: 0 auto; 
-        width: 800px;        
+        margin: 0 auto;
+        width: 800px;
         margin-top: 31px;
     }
 
-    .verifyWrapper div p .resendVerify{
-        color: #47bab3 !important;
-        cursor:pointer;
-    }
+        .verifyWrapper div p .resendVerify {
+            color: #47bab3 !important;
+            cursor: pointer;
+        }
 
-    
+        .verifyWrapper #success, .verifyWrapper #error, .verifyWrapper #resendEmailContainer {
+            display:none;            
+        }
+
+        #reverifyEmailInput{
+            width:250px;
+        }
 </style>

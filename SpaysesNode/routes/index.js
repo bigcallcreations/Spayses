@@ -47,7 +47,14 @@ exports.Verify = function (req, res) {
 };
 
 exports.ResendVerify = function (req, res) {
-    
+    if (req.session && req.session._id) {
+        User.GetUser(req.session._id, function (err, user) {
+            var rand = Math.floor((Math.random() * 100) + 54);
+            Emailer.SendVerificationEmail(user.username, rand, user.email, function () { 
+                res.render('Verify', { title: 'Contact', year: new Date().getFullYear(), message: 'Your contact page' });
+            })
+        })
+    }
 };
 
 //#endregion

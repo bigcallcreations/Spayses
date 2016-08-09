@@ -71,7 +71,9 @@ module.exports.CheckIfUsernameExists = CheckIfUsernameExists;
 module.exports.CheckIfEmailExists = CheckIfEmailExists;
 module.exports.CheckIfUserExists = CheckIfUserExists; 
 module.exports.RemoveVerificationToken = RemoveVerificationToken; 
-module.exports.GetUser = GetUser; 
+module.exports.GetUser = GetUser;
+module.exports.GetUserUsingEmail = GetUserUsingEmail;
+
 
 //#endregion
 
@@ -187,6 +189,15 @@ function CheckIfUserExists(req, sEmail, sPassword, callback) {
 
 function GetUser(_id, callback) {
     User.findOne({ _id: _id }, '_id username verificationToken email', function (err, user) {
+        if (err)
+            callback(err, user);
+        else
+            callback(null, user);
+    });
+}
+
+function GetUserUsingEmail(_email, callback) {
+    User.findOne({ email: _email }, '_id username verificationToken email', function (err, user) {
         if (err)
             callback(err, user);
         else

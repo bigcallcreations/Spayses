@@ -66,12 +66,32 @@
         }
     });
     
-    $('.resendVerify').on('click', function () { 
+    $('.resendVerify').on('click', function () {
+        $("#success").css("display", "none");
+        $("#error").css("display", "none");
+        $("#resendEmailContainer").css("display", "none");
         socket.emit('resendverify');
     })
     
-    socket.on('resendverifycomfirm', function (data) {
-        alert(data);
+    $('#resendEmail').on('click', function () {
+        $("#success").css("display", "none");
+        
+        var emailAdd = $("#resendemail").val();
+        socket.emit('resendverifywemail', { email: emailAdd });
+    })
+
+    socket.on('resendverifycomfirm_error', function (data) {
+        $("#success").css("display", "none");
+        $("#error").css("display", "block");
+        $("#resendEmailContainer").css("display", "block");
+        $("#error").html(data);
+    });
+    
+    socket.on('resendverifycomfirm_success', function (data) {
+        $("#error").css("display", "none");
+        $("#resendEmailContainer").css("display", "none");
+        $("#success").css("display", "block");
+        $("#success").html(data);
     });
     
     function errorCount(add) {
